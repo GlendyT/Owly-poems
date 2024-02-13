@@ -7,7 +7,7 @@ function App() {
   return (
     <PoemProvider>
       <header>
-        <h1>OwlySpace</h1>
+        <h1>Owly's Aegyo Universe</h1>
       </header>
 
       <Poems/>
