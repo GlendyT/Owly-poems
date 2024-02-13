@@ -12,7 +12,7 @@ const Resultado = () => {
     toPng(elementRef.current, { cacheBust: false })
       .then((dataUrl) => {
         const link = document.createElement("a");
-        link.download = "Hobipalooza";
+        link.download = "OwlyMemory";
         link.href = dataUrl;
         link.click();
       })
@@ -23,9 +23,11 @@ const Resultado = () => {
   return (
     <div className="contenedor-poema">
       <div className="poem" ref={elementRef}>
-        <div className="titulo">From: {remitente}</div>
-        <div className="titulo">To: {destinatario}</div>
-        <div className="description">Dear: {description}</div>
+        <div className="titulo">A poem to: {destinatario} </div>
+        <div className="titulo">From: {remitente} </div>
+        <div className="title"> Dear:
+         <div className="description">{description}</div>
+        </div>
       </div>
       <button onClick={htmlToImageConvert}>Download and share</button>
       <button onClick={handleResetApp}>Write another poem</button>

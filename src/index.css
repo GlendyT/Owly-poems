@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 
 body {
   font-family: 'Hubballi', cursive;
@@ -32,6 +33,9 @@ header h1 {
 @media (min-width: 768px) {
   .dos-columnas {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .poem {
+    padding-inline: 10%;
   }
 }
 main {
@@ -186,21 +190,32 @@ form {
 }
 .poem {
   padding-bottom: 10%;
-  background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../src/assets/leather.jpg);
+  padding-inline: 10%;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../src/assets/leather1.jpg);
   background-size:contain;
+  background-position: center;
   object-fit: contain;
+  border-radius: 10px;
 }
 .poem .titulo{
-  text-align: center;
-  font-family: "Sail", system-ui;
+  font-family: "Rubik Doodle Shadow", system-ui;
+  -webkit-text-stroke: 1.5px rgb(204, 26, 136);
+  padding-left: 2%;
+  font-weight: 500;
   font-size: 1.5rem;
+  text-align: center;
 }
-.poem .description{
-  text-align: center;
-  padding-top: 5%;
-  font-family: "Homemade Apple", cursive;
+
+.poem .title{
+  text-align: left;
+  padding: 7%;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  color: #d20974;
+}
+.poem .description {
+  color: #7f005d;
+  text-align: center;
 }
 
 button{
