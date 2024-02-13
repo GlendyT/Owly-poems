@@ -7,13 +7,13 @@ const Formulario = () => {
     const [alerta, setAlerta] = useState("")
 
     const {generar, datosGenerar, generarPoema} = usePoems()
-    const { ciudad, ciudad1, pais} = generar
+    const { remitente, description, destinatario} = generar
 
     const handleSubmit = e => {
         e.preventDefault()
 
         if(Object.values(generar).includes('')) {
-            setAlerta("Todos los campos son obligatorios.");
+            setAlerta("All spaces must be filled out");
             return
         }
         generarPoema(generar)
@@ -28,36 +28,46 @@ const Formulario = () => {
          onSubmit={handleSubmit}
         >
             <div className="campo">
-                <label htmlFor="ciudad">From: </label>
+                <label htmlFor="remitente">From: </label>
                 <input
                  type="text"
-                 id="ciudad"
-                 name="ciudad"
+                 id="remitente"
+                 name="remitente"
                  onChange={datosGenerar}
-                 value={ciudad}
+                 value={remitente}
                 />
             </div>
 
             <div className="campo">
-                <label htmlFor="ciudad1">Write your Poem</label>
+                <label htmlFor="description">Write your Poem</label>
                 <textarea
-                 id="ciudad1"
-                 name="ciudad1"
+                maxLength={200}
+                placeholder="Maximum 200 characters..."
+                rows={5}
+                 id="description"
+                 name="description"
                  onChange={datosGenerar}
-                 value={ciudad1}
+                 value={description}
                 />
             </div>
 
             <div className="campo">
-                <label htmlFor="pais">Dedicated to..</label>
+                <label htmlFor="destinatario">Dedicated to..</label>
                 <select 
-                 id="pais"
-                 name="pais"
+                 id="destinatario"
+                 name="destinatario"
                  onChange={datosGenerar}
-                 value={pais}
+                 value={destinatario}
                 >
                     <option value="">Choose</option>
                     <option value="BTS">BTS</option>
+                    <option value="Kim Namjoon">Kim Namjoon</option>
+                    <option value="Kim Seokjin">Kim Seokjin</option>
+                    <option value="Min Yoongi">Min Yoongi</option>
+                    <option value="Jung Hoseok">Jung Hoseok</option>
+                    <option value="Park Jimin">Park Jimin</option>
+                    <option value="Kim Taehyung">Kim Taehyung</option>
+                    <option value="Jeon Jungkook">Jeon Jungkook</option>
                 </select>
             </div>
 

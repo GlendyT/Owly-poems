@@ -13,7 +13,7 @@ const Poems = () => {
 
         { cargando ?  <Loading /> :  
         
-        resultado?.ciudad && <Resultado/>}
+        resultado?.remitente && <Resultado/>}
     </main>
         
     </>
