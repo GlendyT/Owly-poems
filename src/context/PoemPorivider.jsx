@@ -6,9 +6,9 @@ const PoemProvider =  ({children}) => {
 
 
     const [generar, setGenerar] = useState({
-        ciudad: "",
-        ciudad1: "",
-        pais: ""
+        remitente: "",
+        description: "",
+        destinatario: ""
     })
 
     const [resultado, setResultado] = useState({})
@@ -24,13 +24,22 @@ const PoemProvider =  ({children}) => {
     const generarPoema = datos => {
         setCargando(true)
         try {
-            const { ciudad, ciudad1, pais} = datos
+            const { remitente, description, destinatario} = datos
          setResultado(datos)
          setCargando(false)
         } catch (error) {
          console.log(error)
         } 
     }
+
+    const handleResetApp = () => {
+        const reset = confirm ("Do you want to write another  poem?")
+        if (reset) {
+            setCargando(true),
+            setGenerar({remitente:"",description:"" ,destinatario:""})
+        }
+    }
+
     return (
         <PoemContext.Provider
          value={{
@@ -38,7 +47,8 @@ const PoemProvider =  ({children}) => {
             datosGenerar,
             generarPoema,
             resultado,
-            cargando
+            cargando,
+            handleResetApp
          }}
         >
             {children}
