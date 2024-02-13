@@ -39,7 +39,7 @@ const Formulario = () => {
             </div>
 
             <div className="campo">
-                <label htmlFor="description">Write your Poem</label>
+                <label htmlFor="description">Write your Poem or Pick-up line</label>
                 <textarea
                 maxLength={200}
                 placeholder="Maximum 200 characters..."
