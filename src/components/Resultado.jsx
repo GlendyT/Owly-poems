@@ -23,11 +23,9 @@ const Resultado = () => {
   return (
     <div className="contenedor-poema">
       <div className="poem" ref={elementRef}>
-        <div className="titulo">A poem to: {destinatario} </div>
+        <div className="titulo">To: {destinatario} </div>
         <div className="titulo">From: {remitente} </div>
-        <div className="title"> Dear:
          <div className="description">{description}</div>
-        </div>
       </div>
       <button onClick={htmlToImageConvert}>Download and share</button>
       <button onClick={handleResetApp}>Write another poem</button>

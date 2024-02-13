@@ -34,9 +34,6 @@ header h1 {
   .dos-columnas {
     grid-template-columns: repeat(2, 1fr);
   }
-  .poem {
-    padding-inline: 10%;
-  }
 }
 main {
   margin: 2rem auto;
@@ -201,22 +198,29 @@ form {
   font-family: "Rubik Doodle Shadow", system-ui;
   -webkit-text-stroke: 1.5px rgb(204, 26, 136);
   padding-left: 2%;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 0.7rem;
   text-align: center;
+  padding-bottom: 1%;
 }
-
-.poem .title{
+.poem .description {
   text-align: left;
-  padding: 7%;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-bottom: 10%;
   font-weight: 600;
   font-size: 1rem;
   color: #d20974;
-}
-.poem .description {
   color: #7f005d;
   text-align: center;
 }
+@media (min-width: 599px) {
+  .poem .description{
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 10%;
+  }
+}
+
 
 button{
   background-color: #5e289c;
